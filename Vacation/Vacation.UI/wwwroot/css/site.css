@@ -1,0 +1,44 @@
+* {
+    font-family: 'Chakra Petch', sans-serif;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+/*.btn:focus,.btn:active:focus,.btn-link.nav-link:focus,.form-control:focus,.form-check-input:focus
+{
+    box-shadow:0 0 0 0.25rem #258cbf;
+}*/
+.nav-link {
+    color:#ffffff;
+    margin: 0px 20px;
+    font-size: 1.1rem;
+    transition: all .2s;
+}
+
+    .nav-link:hover {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #ffffff;
+        border-radius: 7px;
+    }
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+ul li a.active {
+    /* Your active navigation style */
+    color: #ffffff;
+    background-color: #ffffff;
+    border-radius: 7px;
+    font-weight: bold;
+}

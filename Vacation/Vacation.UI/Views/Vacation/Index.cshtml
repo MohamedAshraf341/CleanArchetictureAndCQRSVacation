@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Vacation.Application.Features.Vacation.Queries.GetVacationList.GetVacationListViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card border-light">
+    <div class="card-header border-light">
+        Vacation List
+    </div>
+    <div class="card-body">
+        <div class="container-fluid">
+            <div class="text-center">
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">SubmitionDate</th>
+                            <th scope="col">EmployeeName</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">From</th>
+                            <th scope="col">To</th>
+                            <th scope="col">More Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @item.SubmitionDate.ToString("dd-MM-yyyy")
+                                </td>
+                                <td>
+                                    @item.EmployeeName
+                                </td>
+                                <td>
+                                    @item.Department
+                                </td>
+                                <td>
+                                    @item.From.ToString("dd-MM-yyyy")
+                                </td>
+                                <td>
+                                    @item.To.ToString("dd-MM-yyyy")
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Details", "GetByID", new {  id=item.Id })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+

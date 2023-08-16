@@ -1,0 +1,26 @@
+﻿@model Vacation.Application.Features.Vacation.Queries.GetVacationDetail.GetVacationDetailViewModel
+
+@{
+    ViewData["Title"] = "GetByID";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card border-light">
+    <div class="card-header border-light">
+        Vacation Details 
+    </div>
+    <div class="card-body">
+        <div class="container-fluid">
+             <ul class="list-group list-group-flush">
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">Title:</span> @Model.Title</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">EmployeeName:</span> @Model.EmployeeName</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">Department:</span> @Model.Department</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">Submition Date:</span> @Model.SubmitionDate.ToString("dd-MM-yyyy")</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">From:</span> @Model.From.ToString("dd-MM-yyyy")</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">To:</span> @Model.To.ToString("dd-MM-yyyy")</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">Returning:</span> @Model.Returning.ToString("dd-MM-yyyy")</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">Total Days:</span> @Model.TotalDay</li>
+                <li class="list-group-item"><span class="card-subtitle mb-2 text-muted font-weight-bold m-2" style="font-size: 25px;">Notes:</span> @Model.Notes</li>
+             </ul> 
+        </div>
+    </div>
+</div>
